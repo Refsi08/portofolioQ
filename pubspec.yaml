@@ -46,6 +46,10 @@ flutter:
     - assets/images/
     - assets/lottie/roket.json
     - assets/lottie/developer.json
+    - assets/lottie/programmer1.json
+    - assets/lottie/programmer2.json
+    - assets/lottie/programmer3.json
+    - assets/lottie/programmer4.json
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

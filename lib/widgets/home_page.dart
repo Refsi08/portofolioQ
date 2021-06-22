@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:portofolio_q/theme.dart';
+import 'package:portofolio_q/widgets/certicate.dart';
+import 'package:portofolio_q/widgets/design_page.dart';
 import 'package:portofolio_q/widgets/personal_page.dart';
+import 'package:portofolio_q/widgets/team_page.dart';
+import 'package:portofolio_q/widgets/work_page.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -133,39 +137,50 @@ class HomePage extends StatelessWidget {
                                   ),
                                 ),
                                 // container ke 2
-                                Container(
-                                  height: 110,
-                                  width: 147,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.vertical(
-                                      top: Radius.circular(20),
-                                      bottom: Radius.circular(20),
-                                    ),
-                                    color: orangeColor,
-                                  ),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Column(
-                                        children: [
-                                          Image.asset(
-                                            'assets/images/icongroup.png',
-                                            height: 50,
-                                            width: 50,
-                                          ),
-                                          SizedBox(
-                                            height: 12,
-                                          ),
-                                          Text(
-                                            'Group \n Project',
-                                            style: purpletextStyle.copyWith(
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.w600,
-                                            ),
-                                          )
-                                        ],
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => TeamPage(),
                                       ),
-                                    ],
+                                    );
+                                  },
+                                  child: Container(
+                                    height: 110,
+                                    width: 147,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.vertical(
+                                        top: Radius.circular(20),
+                                        bottom: Radius.circular(20),
+                                      ),
+                                      color: orangeColor,
+                                    ),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Column(
+                                          children: [
+                                            Image.asset(
+                                              'assets/images/icongroup.png',
+                                              height: 50,
+                                              width: 50,
+                                            ),
+                                            SizedBox(
+                                              height: 12,
+                                            ),
+                                            Text(
+                                              'Group \n Project',
+                                              style: purpletextStyle.copyWith(
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.w600,
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ],
@@ -174,76 +189,98 @@ class HomePage extends StatelessWidget {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Container(
-                                  height: 110,
-                                  width: 147,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.vertical(
-                                      top: Radius.circular(20),
-                                      bottom: Radius.circular(20),
-                                    ),
-                                    color: orangeColor,
-                                  ),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Column(
-                                        children: [
-                                          Image.asset(
-                                            'assets/images/iconimage.png',
-                                            height: 50,
-                                            width: 50,
-                                          ),
-                                          SizedBox(
-                                            height: 12,
-                                          ),
-                                          Text(
-                                            'Design \n Project',
-                                            style: purpletextStyle.copyWith(
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.w600,
-                                            ),
-                                          ),
-                                        ],
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => DesignPage(),
                                       ),
-                                    ],
-                                  ),
-                                ),
-                                Container(
-                                  height: 110,
-                                  width: 147,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.vertical(
-                                      top: Radius.circular(20),
-                                      bottom: Radius.circular(20),
+                                    );
+                                  },
+                                  child: Container(
+                                    height: 110,
+                                    width: 147,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.vertical(
+                                        top: Radius.circular(20),
+                                        bottom: Radius.circular(20),
+                                      ),
+                                      color: orangeColor,
                                     ),
-                                    color: orangeColor,
-                                  ),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Column(
-                                        children: [
-                                          Image.asset(
-                                            'assets/images/iconcompany.png',
-                                            height: 50,
-                                            width: 50,
-                                          ),
-                                          SizedBox(
-                                            height: 12,
-                                          ),
-                                          Center(
-                                            child: Text(
-                                              'Work \nExperience',
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Column(
+                                          children: [
+                                            Image.asset(
+                                              'assets/images/iconimage.png',
+                                              height: 50,
+                                              width: 50,
+                                            ),
+                                            SizedBox(
+                                              height: 12,
+                                            ),
+                                            Text(
+                                              'Design \n Project',
                                               style: purpletextStyle.copyWith(
                                                 fontSize: 14,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                             ),
-                                          )
-                                        ],
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => WorkPage(),
                                       ),
-                                    ],
+                                    );
+                                  },
+                                  child: Container(
+                                    height: 110,
+                                    width: 147,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.vertical(
+                                        top: Radius.circular(20),
+                                        bottom: Radius.circular(20),
+                                      ),
+                                      color: orangeColor,
+                                    ),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Column(
+                                          children: [
+                                            Image.asset(
+                                              'assets/images/iconcompany.png',
+                                              height: 50,
+                                              width: 50,
+                                            ),
+                                            SizedBox(
+                                              height: 12,
+                                            ),
+                                            Center(
+                                              child: Text(
+                                                'Work \nExperience',
+                                                style: purpletextStyle.copyWith(
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.w600,
+                                                ),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ],
@@ -251,15 +288,25 @@ class HomePage extends StatelessWidget {
                             SizedBox(
                               height: 30,
                             ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Image.asset(
-                                  'assets/images/iconcertificate.png',
-                                  height: 60,
-                                  width: 60,
-                                ),
-                              ],
+                            InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => CertificatePage(),
+                                  ),
+                                );
+                              },
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Image.asset(
+                                    'assets/images/iconcertificate.png',
+                                    height: 60,
+                                    width: 60,
+                                  ),
+                                ],
+                              ),
                             ),
                             SizedBox(
                               height: 15,
