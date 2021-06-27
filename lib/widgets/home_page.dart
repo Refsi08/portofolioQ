@@ -59,7 +59,7 @@ class HomePage extends StatelessWidget {
                           height: 5,
                         ),
                         Text(
-                          'Mobile App Developer',
+                          'Flutter App Developer',
                           style: purpletextStyle.copyWith(
                             fontSize: 14,
                             fontWeight: FontWeight.bold,
